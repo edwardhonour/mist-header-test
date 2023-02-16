@@ -35,6 +35,138 @@
           }
         }
       }
+    },
+    "mist-page-footer": {
+      "projectType": "library",
+      "root": "projects/mist-page-footer",
+      "sourceRoot": "projects/mist-page-footer/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/mist-page-footer/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mist-page-footer/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/mist-page-footer/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/mist-page-footer/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "mist-inspector-news": {
+      "projectType": "library",
+      "root": "projects/mist-inspector-news",
+      "sourceRoot": "projects/mist-inspector-news/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/mist-inspector-news/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mist-inspector-news/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/mist-inspector-news/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/mist-inspector-news/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "mist-data-service": {
+      "projectType": "library",
+      "root": "projects/mist-data-service",
+      "sourceRoot": "projects/mist-data-service/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/mist-data-service/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mist-data-service/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/mist-data-service/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/mist-data-service/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "mist-data-resolver": {
+      "projectType": "library",
+      "root": "projects/mist-data-resolver",
+      "sourceRoot": "projects/mist-data-resolver/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/mist-data-resolver/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mist-data-resolver/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/mist-data-resolver/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/mist-data-resolver/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }

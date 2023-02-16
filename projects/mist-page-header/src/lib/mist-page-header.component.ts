@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
 
+
 @Component({
   selector: 'lib-mist-page-header',
   template: `
@@ -22,12 +23,21 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angu
           </button>
           <div class="collapse navbar-collapse" id="navbarNav" style="width: 100%">
             <ul class="navbar-nav">
-            <li>PAGE IS {{ page }}</li>
-              <li  class="nav-item ms-3 me-2"*ngIf="page!='1'" class="nav-item ms-3 me-2" style="color:white; cursor: pointer"><a class="nav-link active" (click)="gotoMIST('today.asp');"  style="color:white">Home</a></li>
-              <li class="nav-item ms-3 me-2" style="cursor: pointer"><a class="nav-link active" (click)="gotoMIST('rwh001.php');" style="color:wheat">Data Analysis</a></li>
-              <li class="nav-item ms-3 me-2" style="cursor: pointer"><a class="nav-link active" (click)="gotoMIST('facility.asp');" style="color:wheat">Manage Facilities</a></li>
-              <li class="nav-item ms-3 me-2" style="cursor: arrow"><a class="nav-link active"  (click)="gotoMIST('users.asp');" style="color:wheat">Manage Users</a></li>
-              <li class="nav-item ms-3 me-2" style="cursor: arrow"><a class="nav-link active"  style="color:wheat" (click)="gotoMIST('tickets.asp');">TSD </a></li>
+              <!-- Home -->    
+              <li  class="nav-item ms-3 me-2" *ngIf="page=='Home'" class="nav-item ms-3 me-2" style="color:white; cursor: pointer"><a class="nav-link active" [routerLink]="['/']"  style="color:white">Home</a></li>
+              <li  class="nav-item ms-3 me-2" *ngIf="page!='Home'" class="nav-item ms-3 me-2" style="color:white; cursor: pointer"><a class="nav-link active" [routerLink]="['/']"  style="color:wheat">Home</a></li>
+              <!-- Assessments -->
+              <li class="nav-item ms-3 me-2" *ngIf="page=='Assessments'" style="cursor: pointer"><a class="nav-link active" (click)="gotoMIST('/assessments');" style="color:white">Assessments</a></li>
+              <li class="nav-item ms-3 me-2" *ngIf="page!='Assessments'" style="cursor: pointer"><a class="nav-link active" (click)="gotoMIST('/assessments');" style="color:wheat">Assessments</a></li>
+              <!-- Facilities -->
+              <li class="nav-item ms-3 me-2" *ngIf="page=='Facilities'" style="cursor: pointer"><a class="nav-link active" (click)="gotoMIST('/facilities');" style="color:white">Assessments</a></li>
+              <li class="nav-item ms-3 me-2" *ngIf="page!='Facilities'" style="cursor: pointer"><a class="nav-link active" (click)="gotoMIST('/facilities');" style="color:wheat">Assessments</a></li>
+              <!-- Assets -->
+              <li class="nav-item ms-3 me-2" *ngIf="page=='Assets'" style="cursor: pointer"><a class="nav-link active" (click)="gotoMIST('/assets');" style="color:white">Assessments</a></li>
+              <li class="nav-item ms-3 me-2" *ngIf="page!='Assets'" style="cursor: pointer"><a class="nav-link active" (click)="gotoMIST('/assets');" style="color:wheat">Assessments</a></li>
+              <!-- Countermeasures -->
+              <li class="nav-item ms-3 me-2" *ngIf="page=='Assets'" style="cursor: pointer"><a class="nav-link active" (click)="gotoMIST('/countermeasures');" style="color:white">Assessments</a></li>
+              <li class="nav-item ms-3 me-2" *ngIf="page!='Assets'" style="cursor: pointer"><a class="nav-link active" (click)="gotoMIST('/countermeasures');" style="color:wheat">Assessments</a></li>
               <li class="nav-item ms-3 me-2" style="cursor: arrow"><a class="nav-link active"  style="color:wheat" href="#">&nbsp; &nbsp; &nbsp; </a></li>
               <li class="nav-item ms-3 me-2"><a class="nav-link active" href="#">&nbsp; </a></li>
               <li class="nav-item ms-3 me-2"><a class="nav-link active"  style="color:whitesmoke"  href="#">Logged in as: {{ username }} ({{ role }})</a></li> 

@@ -10,6 +10,18 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "paths": {
+      "mist-data-resolver": [
+        "dist/mist-data-resolver"
+      ],
+      "mist-data-service": [
+        "dist/mist-data-service"
+      ],
+      "mist-inspector-news": [
+        "dist/mist-inspector-news"
+      ],
+      "mist-page-footer": [
+        "dist/mist-page-footer"
+      ],
       "mist-page-header": [
         "dist/mist-page-header"
       ]

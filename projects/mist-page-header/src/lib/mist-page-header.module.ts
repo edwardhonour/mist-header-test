@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { MistPageHeaderComponent } from './mist-page-header.component';
+import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -7,7 +8,7 @@ import { CommonModule } from '@angular/common';
     MistPageHeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, RouterLink
   ],
   exports: [
     MistPageHeaderComponent
